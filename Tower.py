@@ -30,6 +30,7 @@ def hanoi_tower(disks: int, rods_list : list, start_rod : list, end_rod : list, 
 '''to_rod - на какой стержнь'''
 '''count - счетчик шагов'''
 def move_disk(disk : int, from_rod : list, to_rod : list, count: list):
+    to_rod.append(from_rod.pop())
     row = f"Блин {disk}: Стержень {str(from_rod)} -> Стержень {str(to_rod)}"
     print(row)
     count.append(disk)
